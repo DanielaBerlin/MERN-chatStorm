@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
     "build": "cd mern-chat-backend && npm install && cd ../mern-chat-frontend && npm install && npm run build",
-    "start": "node ./mern-chat-backend/server.js",
+    "start": "node mern-chat-backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
