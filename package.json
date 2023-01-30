@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/DanielaBerlin/MERN-chatStorm/issues"
   },
-  "homepage": "https://github.com/DanielaBerlin/MERN-chatStorm#readme"
+  "homepage": "https://github.com/DanielaBerlin/MERN-chatStorm#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
