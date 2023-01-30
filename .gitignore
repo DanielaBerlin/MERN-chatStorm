@@ -1,6 +1,6 @@
 # dependencies
 /mern-chat-backend/.env
-/mern-chat-frontent/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
