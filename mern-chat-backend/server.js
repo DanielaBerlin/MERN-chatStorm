@@ -107,7 +107,6 @@ io.on('connection', (socket) => {
 app.get('/rooms', (req, res) => {
   res.json(rooms);
 });
-const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, 'mern-chat-frontend/frontend/build')));
 
