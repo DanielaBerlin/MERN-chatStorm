@@ -105,6 +105,10 @@ app.get('/rooms', (req, res) => {
   res.json(rooms);
 });
 
+app.get('*', (req, res) =>
+    res.sendFile(path.join(__dirname, 'mern-chat-frontend/build/index.html'))
+);
+
 server.listen(port, () => {
   console.log('💻 listening to port', port);
 });
