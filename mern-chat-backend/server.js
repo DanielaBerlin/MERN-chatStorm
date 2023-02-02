@@ -4,6 +4,7 @@ const userRoutes = require('./routes/userRoutes');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
+
 dotenv.config();
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -26,6 +27,8 @@ app.use(cors());
 
 app.use('/users', userRoutes);
 require('./server');
+const path = require('path');
+
 
 const server = require('http').createServer(app);
 const port = process.env.PORT || 5001;
@@ -104,9 +107,12 @@ io.on('connection', (socket) => {
 app.get('/rooms', (req, res) => {
   res.json(rooms);
 });
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, 'mern-chat-frontend/frontend/build')));
 
 app.get('*', (req, res) =>
-    res.sendFile(path.join(__dirname, './mern-chat-frontend/build/index.html'))
+    res.sendFile(path.join(__dirname, 'mern-chat-frontend/build/index.html'))
 );
 
 server.listen(port, () => {
